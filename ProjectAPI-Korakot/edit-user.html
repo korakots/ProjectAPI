@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="image/logo-big2.ico">
+		<link rel="shortcut icon" type="image/ico" href="logo-big2.ico">
+		<link rel="logo" href="image/logo.png">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<title>Korakot - Edit User</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/image.css">
+	</head>
+	<body>
+
+		<div class="brand clearfix">
+			<a class="navbar-brand" href="index.html"><i class="fa fa-heart" aria-hidden="true"> KORAKOT</i></a>
+			<span class="menu-btn"><i class="fa fa-bars"></i></span>
+			<ul class="ts-profile-nav">
+				<li class="ts-account">
+					<a href="#" style="text-decoration: none;">
+					<img src="image/avatars.jpg" class="avatars hidden-side">
+					<span class="username" style="color:black"></span>
+					<i class="fa fa-angle-down hidden-side"></i>
+					</a>
+					<ul>
+						<li><a href="#" class="account">MY ACCOUNT</a></li>
+						<li><a href="index.html" onclick="deleteCookie()">LOGOUT</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="ts-main-content">
+			<nav class="ts-sidebar">
+				<ul class="ts-sidebar-menu">
+					<li class="ts-label">MAIN</li>
+
+					<li><a href="#" class="account"><i class="fa fa-id-card-o" aria-hidden="true"></i> MY ACCOUNT</a></li>
+					<li><a href="#" class="my-profile"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; MY PROFILE</a></li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i> USER</a>
+						<ul>
+							<li><a href="#" class="add-emp">ADD USER</a></li>
+							<li><a href="#" class="manage-emp">MANAGE USER</a></li>
+						</ul>
+					</li>
+					<li style="position: absolute; bottom: 0;"><a href="index.html" onclick="deleteCookie()"><i class="fa fa-unlock"></i>&nbsp; LOGOUT</a>
+				</ul>
+			</nav>
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<br><br><span class="contain"></span>
+							<h2 class="page-title">EDIT USER DETAILS </h2>
+							<div class="row">
+								<div class="col-md-3">
+									<br><br>
+									<div class="polaroid" style=" border-radius: 18px;">
+										<img src="image/avatar.jpg" alt="Norway" style="width:100%">
+									</div>
+								</div>
+								<br>
+								<div class="col-md-9">
+									<div class="panel panel-danger">
+										<div class="panel-heading">EDIT USER DETAILS</div>
+										<div class="panel-body">
+											<form class="form-horizontal" action="#" method="POST" role="form">
+												<div class="form-group">
+													<label for="id" class="col-sm-2 control-label">USER ID </label>
+													<div class="col-sm-8">
+														<input type="text" class="col-sm-2 form-control" id="id" name="id" disabled>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="fname" class="col-sm-2 control-label">FIRSTNAME</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="fname" name="fname">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="lname" class="col-sm-2 control-label">LASTNAME</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="lname" name="lname">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="email" class="col-sm-2 control-label">E-MAIL</label>
+													<div class="col-sm-8">
+														<input type="email" class="form-control" id="email" name="email">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="tel" class="col-sm-2 control-label">TEL</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="tel" name="tel">
+													</div>
+												</div>
+												<input type="hidden" id="username" name="username" value="E">
+												<input type="hidden" id="password" name="password" value="E">
+												<div class="col-sm-6 col-sm-offset-2">
+													<button type="button" name="button" class="cancel btn btn-primary btn-lg">CANCEL</button>
+													<button type="button" name="button" id="save" class="btn btn-primary btn-lg">EDIT PROFILE</button>
+												</div>
+											</form>
+										</div>
+										<div class="panel-footer panel-heading"></div>
+									</div>
+								</div>
+							</div>
+							<div id="err" style="display:none" class="alert alert-success alert-dismissable fade in">
+								<a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+								<strong>Update Successful!!!</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/cache.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/edit-emp.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			console.log($.cookie('keep'));
+
+			function deleteCookie() {
+			    $.removeCookie('keep');
+			    console.log($.removeCookie('keep'));
+			}
+		</script>
+	</body>
+</html>
